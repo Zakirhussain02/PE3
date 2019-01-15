@@ -1,3 +1,8 @@
+/*
+ Create a class called StudentMarks, which prompts user for the number of students, reads it from the keyboard, and saves it in an int variable called numOfStudents.
+ It then prompts user for the grades of each of the students and saves them in an int array called stuGrades. Your program shall check that the grade is between 0 and 100
+  else has to trow an error message.
+ */
 package com.company;
 
 import java.util.Scanner;
@@ -6,6 +11,7 @@ public class StudentMarks {
     public String studentGrades(String[] a,int number)
         {
             StringBuilder result=new StringBuilder();
+
             for(int i=0;i<number;i++)
             {
                 if(Integer.parseInt(a[i])<100)
@@ -18,6 +24,7 @@ public class StudentMarks {
             return result.toString();
         }
     public static void main(String a[]) {
+
         //number of inputs
         Scanner number = new Scanner(System.in);
         System.out.print("Enter the number of students ");

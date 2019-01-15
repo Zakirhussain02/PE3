@@ -1,3 +1,17 @@
+/*
+Write a program to create a ChessBoard pattern with the help of multidimensional array, where WWrepresents white color and BB represents Black color.
+ Output:
+ My Chess Board
+      WW|BB|WW|BB|WW|BB|WW|BB|
+      BB|WW|BB|WW|BB|WW|BB|WW|
+      WW|BB|WW|BB|WW|BB|WW|BB|
+      BB|WW|BB|WW|BB|WW|BB|WW|
+      WW|BB|WW|BB|WW|BB|WW|BB|
+      BB|WW|BB|WW|BB|WW|BB|WW|
+      WW|BB|WW|BB|WW|BB|WW|BB|
+      BB|WW|BB|WW|BB|WW|BB|WW|
+
+ */
 package com.company;
 
 import java.util.ArrayList;
@@ -8,31 +22,33 @@ public class ChessBoardPattern {
     }
 
     public static String chessPattern(int a, int b) {
-        String s = "WW|";
-        String pattern = "";
+        String str = "WW|";
+        String outputString = "";
+        //fot rows
         for (int i = 0; i < a; i++) {
-            switch (s) {
+            switch (str) {
                 case "WW|":
-                    s = "BB|";
+                    str = "BB|";
                     break;
                 case "BB|":
-                    s = "WW|";
+                    str = "WW|";
                     break;
             }
-            pattern = pattern + "\n";
+            //for colums
+            outputString = outputString + "\n";
             for (int j = 0; j < b; j++) {
-                switch (s) {
+                switch (str) {
                     case "WW|":
-                        s = "BB|";
-                        pattern = pattern + s;
+                        str = "BB|";
+                        outputString = outputString + str;
                         break;
                     case "BB|":
-                        s = "WW|";
-                        pattern = pattern + s;
+                        str = "WW|";
+                        outputString = outputString + str;
                         break;
                 }
             }
         }
-        return pattern;
+        return outputString;
     }
 }

@@ -8,16 +8,19 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ConsectiveNumbersCheck {
+    ConsectiveNumbers consectiveNumbers;
 
     @Before
     public void setUp() throws Exception {
+        consectiveNumbers = new ConsectiveNumbers();
     }
 
     @After
     public void tearDown() throws Exception {
+        consectiveNumbers = null;
     }
 
-    ConsectiveNumbers consectiveNumbers;
+
     @Test
     public void ConsectiveNumbersSuccess(){
         String expectedValue = "21,22,23,24,25,26,27 are consecutive numbers";
